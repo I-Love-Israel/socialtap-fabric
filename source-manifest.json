@@ -1,0 +1,112 @@
+[
+  {
+    "path": ".gitignore",
+    "sha256": "9b882677e94970e95db955c6b15b32ae5f82b808bffe703d421fd9d767d5c11a",
+    "bytes": 237
+  },
+  {
+    "path": "build.gradle",
+    "sha256": "7d2dbb4f6dc2b442469927cc1f72893be0343ce8bb2d7e3aacc9cfe27518128c",
+    "bytes": 231
+  },
+  {
+    "path": "gradle.properties",
+    "sha256": "fda2f954998f3ca2c42e05ce086195c3c4c42299231ea1e8029b8bd957c84912",
+    "bytes": 194
+  },
+  {
+    "path": "gradle/wrapper/gradle-wrapper.jar",
+    "sha256": "3b8a25775a69158b5ad2b1d17a80a88dc7b40a352a73eb27d06c612a7ce68e98",
+    "bytes": 48749
+  },
+  {
+    "path": "gradle/wrapper/gradle-wrapper.properties",
+    "sha256": "70839bbe38c101499b2c65ee26c17365e01daa5bef158aded54c661f966dcdf3",
+    "bytes": 281
+  },
+  {
+    "path": "gradlew.bat",
+    "sha256": "31ec098bd961c460b62875950c3eff5c8213bcb0bbde38d769b88512877fd21f",
+    "bytes": 4776
+  },
+  {
+    "path": "mc1_21_4/build.gradle",
+    "sha256": "ee6630688561f5169542093276bb791b469e196d70e812989f3f7fd43fff5987",
+    "bytes": 1027
+  },
+  {
+    "path": "mc1_21_4/src/main/java/social/socialtap/mc/SocialTapClient.java",
+    "sha256": "2a05225cf903218bcf44a1ddeb72797aaf9ebf7348f3c17aba820ddcb03701b1",
+    "bytes": 5612
+  },
+  {
+    "path": "mc1_21_4/src/main/resources/fabric.mod.json",
+    "sha256": "b01614864850801fb64bace5fa21410568f8897ff9d9630e9ee8c7dc797fac59",
+    "bytes": 497
+  },
+  {
+    "path": "mc26_2/build.gradle",
+    "sha256": "31c70f5735e6c4f6b45474b1aa109cc884ec7943a95c8ec83e074b841caa996d",
+    "bytes": 969
+  },
+  {
+    "path": "mc26_2/src/main/java/social/socialtap/mc/SocialTapClient.java",
+    "sha256": "7db6a47e9870b31435d98433fe99da5241953f451d6a8b3964824a2a35ca0ec1",
+    "bytes": 5306
+  },
+  {
+    "path": "mc26_2/src/main/resources/fabric.mod.json",
+    "sha256": "dac014ed24104bd455aceeb7878ef186699f3a3fc70dad06f129c5088bd66100",
+    "bytes": 495
+  },
+  {
+    "path": "settings.gradle",
+    "sha256": "04d3b2e564453520be291b4247e253f32e3981df41fc066562161062b162fffc",
+    "bytes": 311
+  },
+  {
+    "path": "shared/src/main/java/social/socialtap/core/CallAudio.java",
+    "sha256": "9d9a966af217cb692bee74b8a65a538070f78bf115c64bdf0411641ac1451ca8",
+    "bytes": 9013
+  },
+  {
+    "path": "shared/src/main/java/social/socialtap/core/Config.java",
+    "sha256": "8c40b09390b84fd2b3724584329e5a531210fc1e5db5bbf3ac14d2c83a9e19c7",
+    "bytes": 2321
+  },
+  {
+    "path": "shared/src/main/java/social/socialtap/core/Constants.java",
+    "sha256": "5626663ebaeffcc7ed8193dab581757deb1b04476d462dc9b87f6a4687811d23",
+    "bytes": 915
+  },
+  {
+    "path": "shared/src/main/java/social/socialtap/core/Host.java",
+    "sha256": "1562685646bcdac0fe22eca29a05ee9c56cd158f59a6cf33664a0efb9b458b70",
+    "bytes": 197
+  },
+  {
+    "path": "shared/src/main/java/social/socialtap/core/Log.java",
+    "sha256": "7a92667f67bb9cc0a1e3335bed32f5130ae02214d56c250e68fb60f10f5090e9",
+    "bytes": 210
+  },
+  {
+    "path": "shared/src/main/java/social/socialtap/core/OAuth.java",
+    "sha256": "e96d382b2eae3064b1a2f305e9a04b846d4836b759cbd7d93e372086295458e4",
+    "bytes": 10214
+  },
+  {
+    "path": "shared/src/main/java/social/socialtap/core/Overlay.java",
+    "sha256": "86ea1519fa0bf3159ed860a51bd2e424b8b53de60ac2cca6ca97944dc0957236",
+    "bytes": 14683
+  },
+  {
+    "path": "shared/src/main/java/social/socialtap/core/SocialTapService.java",
+    "sha256": "99639a73a50fa58125e80fa864501091044ee10c5a7300cd552b8ee9d57758e9",
+    "bytes": 28207
+  },
+  {
+    "path": "shared/src/main/java/social/socialtap/core/SocketIo.java",
+    "sha256": "9192a63976724dd6bdc05c3e4fc7c0d2df80f252451325d27df43cd065d42ff6",
+    "bytes": 12566
+  }
+]
