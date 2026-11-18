@@ -5,13 +5,18 @@
     "bytes": 237
   },
   {
+    "path": "AGENTS.md",
+    "sha256": "f33ea870242b9d80c156297b4f78bd53b617059ecc9e5c4202e978c28f81ae42",
+    "bytes": 998
+  },
+  {
     "path": "build.gradle",
     "sha256": "7d2dbb4f6dc2b442469927cc1f72893be0343ce8bb2d7e3aacc9cfe27518128c",
     "bytes": 231
   },
   {
     "path": "gradle.properties",
-    "sha256": "e798a081856b3ad956f602e786866bef15107d92532c6743c85a98cdc6dc9544",
+    "sha256": "cf00db91bbd22d64452ea7851edc598abde799fac52dc726b78e849be1753ed5",
     "bytes": 194
   },
   {
@@ -36,8 +41,8 @@
   },
   {
     "path": "mc1_21_4/src/main/java/social/socialtap/mc/SocialTapClient.java",
-    "sha256": "7a05f6514449fcdb474b078b65044b0abe41f888e44b6e86a9df3bac24509a55",
-    "bytes": 7466
+    "sha256": "b60331aa466f2b1735bae3e76902e8aa9af422812f0458b2ea52dc8efb0bd159",
+    "bytes": 10534
   },
   {
     "path": "mc1_21_4/src/main/resources/fabric.mod.json",
@@ -51,8 +56,8 @@
   },
   {
     "path": "mc26_2/src/main/java/social/socialtap/mc/SocialTapClient.java",
-    "sha256": "0e45daf3afdb9f4ae2dbaa0820330377129612e4b0fc2b2f100ed8a4c4d2e1db",
-    "bytes": 7148
+    "sha256": "3851fb977ca972739c003d31f3c5c19bf90f9f8b098a93bbd28bdfa42ad12a39",
+    "bytes": 10168
   },
   {
     "path": "mc26_2/src/main/resources/fabric.mod.json",
@@ -71,8 +76,8 @@
   },
   {
     "path": "shared/src/main/java/social/socialtap/core/Config.java",
-    "sha256": "8773fef571eaaead9bb6664038e548ab62edd23f1bb6a5a10ea6272b49ce2fef",
-    "bytes": 3178
+    "sha256": "47543a00614871ff0017d41562a7e53fff7e0b75baf3841c6acb9a613f52460b",
+    "bytes": 3737
   },
   {
     "path": "shared/src/main/java/social/socialtap/core/Constants.java",
@@ -90,6 +95,11 @@
     "bytes": 210
   },
   {
+    "path": "shared/src/main/java/social/socialtap/core/LootGuard.java",
+    "sha256": "a7c17204437c7fd32a5e848e1d4f27761db3dba066e4f97cd8edd9d775fba8de",
+    "bytes": 5039
+  },
+  {
     "path": "shared/src/main/java/social/socialtap/core/OAuth.java",
     "sha256": "fba7a58821819d88a524c6640a21a2c5b76f149de49b06a16fb67ef04f014795",
     "bytes": 10577
@@ -101,8 +111,8 @@
   },
   {
     "path": "shared/src/main/java/social/socialtap/core/SocialTapService.java",
-    "sha256": "460b7b11f7c1a7fe099e80af3db955975371b5aab870c3b987cde45fe8d227c4",
-    "bytes": 35381
+    "sha256": "8cd3d5fea93031467c0b542c06d17dfef239532173c4bf1d0957e40f8edcc211",
+    "bytes": 35515
   },
   {
     "path": "shared/src/main/java/social/socialtap/core/SocketIo.java",
