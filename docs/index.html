@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Social Tap for Minecraft</title>
+<meta name="description" content="Social Tap calls and messages inside Minecraft. Fabric mod for 26.3, 26.2 and 1.21.4.">
+<link rel="icon" href="grass-block.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0b0d12; --panel: #141821; --panel-2: #1a1f2b; --line: #262c3a;
+  --text: #eef1f7; --muted: #9aa3b5; --accent: #5865f2; --accent-2: #3ba55d; --glow: rgba(88,101,242,.35);
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f6f7fb; --panel: #ffffff; --panel-2: #f0f2f8; --line: #e1e5ee;
+    --text: #141821; --muted: #5d6679; --glow: rgba(88,101,242,.18);
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.55;
+  background-image: radial-gradient(900px 500px at 15% -10%, var(--glow), transparent 60%),
+                    radial-gradient(700px 400px at 100% 0%, rgba(59,165,93,.14), transparent 60%);
+  background-repeat: no-repeat;
+}
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+nav { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -.01em; }
+.brand img { width: 28px; height: 28px; border-radius: 7px; image-rendering: pixelated; }
+nav a.gh { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; }
+nav a.gh:hover { color: var(--text); }
+header { padding: 64px 0 40px; text-align: center; }
+.pill { display: inline-block; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px;
+  font-size: 13px; color: var(--muted); background: var(--panel); }
+.pill b { color: var(--accent-2); font-weight: 600; }
+h1 { font-size: clamp(36px, 7vw, 64px); line-height: 1.05; letter-spacing: -.035em; margin: 20px 0 16px; font-weight: 800; }
+h1 span { background: linear-gradient(90deg, #7983ff, #5865f2 40%, #3ba55d); -webkit-background-clip: text; background-clip: text; color: transparent; }
+header p { color: var(--muted); font-size: 18px; max-width: 620px; margin: 0 auto; }
+.downloads { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 48px 0 24px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 24px;
+  display: flex; flex-direction: column; gap: 14px; transition: transform .15s, border-color .15s, box-shadow .15s; }
+.card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 12px 40px -12px var(--glow); }
+.card .top { display: flex; justify-content: space-between; align-items: center; }
+.mc { font-size: 30px; font-weight: 800; letter-spacing: -.02em; }
+.tag { font-size: 12px; font-weight: 600; padding: 4px 9px; border-radius: 999px; background: var(--panel-2); color: var(--muted); }
+.tag.new { background: rgba(59,165,93,.16); color: var(--accent-2); }
+.card p { margin: 0; color: var(--muted); font-size: 14px; }
+.btn { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: auto;
+  background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; padding: 13px 16px; border-radius: 12px; }
+.btn:hover { filter: brightness(1.1); }
+.btn svg { width: 18px; height: 18px; }
+.file { font: 12px ui-monospace, Consolas, monospace; color: var(--muted); text-align: center; overflow-wrap: anywhere; }
+.note { text-align: center; color: var(--muted); font-size: 14px; }
+.note a { color: var(--text); }
+h2 { font-size: 28px; letter-spacing: -.02em; margin: 72px 0 20px; text-align: center; }
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.feat { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
+.feat h3 { margin: 0 0 6px; font-size: 16px; }
+.feat p { margin: 0; color: var(--muted); font-size: 14px; }
+kbd, code { font: 13px ui-monospace, Consolas, monospace; background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; }
+ol.steps { max-width: 620px; margin: 0 auto; padding-left: 22px; color: var(--muted); }
+ol.steps li { margin: 8px 0; }
+ol.steps b { color: var(--text); }
+.shot { margin: 40px auto 24px; max-width: 854px; }
+.shot img { width: 100%; height: auto; display: block; border-radius: 16px; border: 1px solid var(--line);
+  box-shadow: 0 30px 80px -30px var(--glow); image-rendering: pixelated; }
+footer { margin: 80px 0 0; padding: 28px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; text-align: center; }
+footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <div class="brand"><img src="grass-block.png" alt="">Social Tap for Minecraft</div>
+    <a class="gh" href="https://github.com/I-Love-Israel/socialtap-fabric">GitHub ↗</a>
+  </nav>
+
+  <header>
+    <span class="pill">Fabric mod · <b>v1.6.0</b></span>
+    <h1>Your <span>Social Tap</span> chats,<br>right inside Minecraft.</h1>
+    <p>Answer calls, read and reply to messages, and see who you're talking to without leaving the game.</p>
+  </header>
+
+  <section class="downloads" aria-label="Downloads">
+    <div class="card">
+      <div class="top"><span class="mc">26.3</span><span class="tag new">Newest</span></div>
+      <p>For Minecraft 26.3 with Fabric Loader and Fabric API.</p>
+      <a class="btn" href="https://github.com/I-Love-Israel/socialtap-fabric/releases/download/v1.6.0/socialtap-fabric-26.3-1.6.0.jar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download for 26.3</a>
+      <div class="file">socialtap-fabric-26.3-1.6.0.jar</div>
+    </div>
+    <div class="card">
+      <div class="top"><span class="mc">26.2</span><span class="tag">Supported</span></div>
+      <p>For Minecraft 26.2 with Fabric Loader and Fabric API.</p>
+      <a class="btn" href="https://github.com/I-Love-Israel/socialtap-fabric/releases/download/v1.6.0/socialtap-fabric-26.2-1.6.0.jar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download for 26.2</a>
+      <div class="file">socialtap-fabric-26.2-1.6.0.jar</div>
+    </div>
+    <div class="card">
+      <div class="top"><span class="mc">1.21.4</span><span class="tag">Supported</span></div>
+      <p>For Minecraft 1.21.4 with Fabric Loader and Fabric API.</p>
+      <a class="btn" href="https://github.com/I-Love-Israel/socialtap-fabric/releases/download/v1.6.0/socialtap-fabric-1.21.4-1.6.0.jar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Download for 1.21.4</a>
+      <div class="file">socialtap-fabric-1.21.4-1.6.0.jar</div>
+    </div>
+  </section>
+  <figure class="shot"><img src="panel-26.3.png" alt="The Social Tap window open in Minecraft 26.3, showing a chat list, messages and the call box" width="854" height="480"></figure>
+  <p class="note">Older builds are on the <a href="https://github.com/I-Love-Israel/socialtap-fabric/releases">releases page</a>.</p>
+
+  <h2>What it does</h2>
+  <section class="features">
+    <div class="feat"><h3>Social Tap window</h3><p>Press <kbd>`</kbd> or run <code>/socialtap</code> for your chats, unread counts, who's online, history and a message box.</p></div>
+    <div class="feat"><h3>Calls in game</h3><p>Incoming calls pop up with a big Respond button. Start calls yourself, and talk through the mod's voice.</p></div>
+    <div class="feat"><h3>Call overlay</h3><p>A 50% see-through box at the top shows who you're in a call with and for how long.</p></div>
+    <div class="feat"><h3>Quick replies</h3><p><code>/respond &lt;username&gt; &lt;message&gt;</code> replies without opening anything.</p></div>
+    <div class="feat"><h3>Quiet mode</h3><p><code>/socialtap obnoxious false</code> moves messages to small cards in the top left that fade after 5 seconds.</p></div>
+    <div class="feat"><h3>Activity card</h3><p>Your Social Tap profile shows your Minecraft version, server and time played.</p></div>
+  </section>
+
+  <h2>Install</h2>
+  <ol class="steps">
+    <li><b>Install Fabric Loader</b> and <b>Fabric API</b> for your Minecraft version.</li>
+    <li><b>Download</b> the jar that matches your Minecraft version above.</li>
+    <li><b>Drop it</b> into your <code>mods</code> folder and start the game.</li>
+    <li>Run <code>/socialtap login</code> and sign in with your Social Tap account in the browser.</li>
+  </ol>
+
+  <footer>
+    Built on the <a href="https://socialtap.social/apidocs">Social Tap API</a>. Source on <a href="https://github.com/I-Love-Israel/socialtap-fabric">GitHub</a>.
+  </footer>
+</div>
+</body>
+</html>

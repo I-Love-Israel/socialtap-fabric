@@ -11,7 +11,7 @@
   },
   {
     "path": "gradle.properties",
-    "sha256": "4b5470810eba2342d3f536aadbc9781afd0c4c3a22917d55ae98c3804506d2ee",
+    "sha256": "c9d99a6ba76fb32c058830ffca52bba56e3c339e991feb3e768f10046724f952",
     "bytes": 194
   },
   {
@@ -80,9 +80,34 @@
     "bytes": 495
   },
   {
+    "path": "mc26_3/build.gradle",
+    "sha256": "547d0776e909832816fa90db8a37f48dc59543c76640bca8b15394cffcb691cf",
+    "bytes": 969
+  },
+  {
+    "path": "mc26_3/src/main/java/social/socialtap/mc/SocialTapClient.java",
+    "sha256": "3eaad12960e6ad304b7b09295f7c77595e5f73279777a1de2bf717cb8e712633",
+    "bytes": 10286
+  },
+  {
+    "path": "mc26_3/src/main/java/social/socialtap/mc/SocialTapScreen.java",
+    "sha256": "09389559e4149d13a5e10fb6ac81a904367aa8dbe01de0dd044d5a33a9f7a283",
+    "bytes": 2199
+  },
+  {
+    "path": "mc26_3/src/main/resources/assets/socialtap/lang/en_us.json",
+    "sha256": "6e317907d732e8696d330d2bb084ce0a398b92470aa9c797d17a5a5d975c31c0",
+    "bytes": 139
+  },
+  {
+    "path": "mc26_3/src/main/resources/fabric.mod.json",
+    "sha256": "ff9fc060f7b6df93516ff1ed9568734d6a02add5d20a9fe43f292db64fed1624",
+    "bytes": 495
+  },
+  {
     "path": "settings.gradle",
-    "sha256": "04d3b2e564453520be291b4247e253f32e3981df41fc066562161062b162fffc",
-    "bytes": 311
+    "sha256": "503624e8d1490dac14003c1400b02162209bfe672bc8c13d92d48b5f28a81221",
+    "bytes": 329
   },
   {
     "path": "shared/src/main/java/social/socialtap/core/CallAudio.java",
